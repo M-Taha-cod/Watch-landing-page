@@ -1,0 +1,2102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Miltonian&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+
+* { 
+margin: 0%;
+padding: 0%;
+font-family: 'poppins', 'sans-serif' ;
+box-sizing: border-box;
+}
+
+body{
+height: 100%;
+width: 100%;
+}
+
+.head{
+    display: flex;
+    flex-wrap: wrap ;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.192);
+    z-index: 7;
+    box-shadow: 1px 1px 10px 2px black;
+    border: none;
+    backdrop-filter: blur(5px);
+    color: white;
+}
+
+.header div{
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
+}
+
+.header div i{
+    cursor: pointer;
+}
+
+.logo-name{
+    font-size: 40px;
+    font-family: "Carter One", serif;
+    font-style: italic;
+}
+
+.side-text{
+    font-size: 20px;
+    font-family: "Carter One", serif;
+    font-style: italic;
+    cursor: pointer;
+}
+
+.background-img{
+    height: 100%;
+    width: 100%;
+}
+
+.img-top{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    background-size: cover;
+    z-index: 3;
+}
+
+.img-bottom{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 60px;
+    left: 0;
+    background-size: cover;
+    z-index: 1;
+}
+
+.hand-img{
+    position: absolute;     
+    left: 10;
+    height: 1100px;
+    width: 1200px;
+    z-index: 2;
+}
+
+.watch-img{
+    position: absolute;
+    z-index: 4;
+    height: 400px;
+    transform: rotate(20deg);
+    bottom: 130px;
+    transition: transform 2s ease, opacity 1s ease, visibility 1s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.watch-img.rotate-90 {
+    transform: rotate(90deg); /* Rotate the image by 90 degrees */
+}
+
+.watch-img.show-image {
+    opacity: 1; /* Make the image fully visible */
+    visibility: visible; /* Show the image */
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 2s ease;
+    z-index: 1;
+    font-size: 200px;
+    font-family: "Audiowide", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.text.move-left {
+    left: 11%;
+    top: 30%;
+    font-size: 2rem;
+}
+
+.text.show-text{
+    opacity: 1;
+    visibility: visible;
+}
+
+.bottom-text{
+    position: absolute;
+    bottom: 40px;
+    font-size: 90px;
+    font-family: "Audiowide", serif;
+    font-weight: 400;
+    font-style: normal;
+    z-index: 8;
+    color: rgb(38, 133, 136);
+    text-shadow: 1px 1px 10px black;
+}
+
+@font-face {
+    font-family: "CustomFont";
+    src: url("/images/911PorschaBoldItalic-Ldz5.otf") format("opentype");
+}
+
+/* @font-face {
+    font-family: "AubirentFont";
+    src: url("/images/AubriebrevonRegular-2vGV8.otf") format("opentype");
+} */
+
+/* @font-face {
+    font-family: "HaverbrockFont";
+    src: url("/images/HaverbrookeHollow-rgZ7K.ttf") format("opentype");
+} */
+
+@font-face {
+    font-family: "SeratiFont";
+    src: url("/images/Serati-nAjp0.ttf") format("opentype");
+}
+
+
+.left-text{
+    position: absolute;
+    color: white;
+    left: 3%;
+    top: 32%;
+    width: 400px;
+    z-index: 8;
+    font-size: 15px;
+}
+
+.user-info{
+    position: absolute;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.199);
+    left: 3%;
+    top: 50%;
+    color: white;
+    font-size: 20px;
+    z-index: 8;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.video-div{
+    position: absolute;
+    left: 3%;
+    bottom: 30px;
+    height: 200px;
+    width: 350px;
+    z-index: 8;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: black;
+}
+
+.video-div video{
+    height: 100%;
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.video-div video::-webkit-media-controls {
+    display: none !important;
+}
+
+.video-div video::-webkit-media-controls-enclosure {
+    display: none !important;
+}
+
+.video-div video::-webkit-media-controls-panel {
+    display: none !important;
+}
+
+/* Show controls on hover */
+.video-div:hover video::-webkit-media-controls {
+    display: flex !important;
+}
+
+.video-div:hover video::-webkit-media-controls-enclosure {
+    display: flex !important;
+}
+
+.video-div:hover video::-webkit-media-controls-panel {
+    display: flex !important;
+}
+
+.price-tag{
+    position: absolute;
+    right: 3%;
+    padding: 8px 13px; 
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    font-family: "Audiowide", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: rgba(255, 255, 255, 0.233);
+    border-radius: 5px;
+    top: 40%;
+}
+
+.concept{
+    position: absolute;
+    font-size: 65px;
+    font-family: "Audiowide", serif;
+    font-weight: 400;
+    font-style: normal;
+    right: 3%;
+    color: white;
+    top: 48%;
+}
+
+.right-data{
+    position: absolute;
+    right: 3%;
+    width: 400px;
+    bottom: 15%;
+    z-index: 8;
+}
+
+.right-data p{
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    text-shadow: 1px 1px 3px black;
+}
+
+.head2{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.btm-bkgImg{
+    height: 100%;
+    width: 100%;
+}
+
+.btm-bkgImg::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+}
+
+.side-img{
+    position: absolute;
+    left: 3%;
+    bottom: -210px;
+    height: 700px;
+    width: 180vh;
+    transform: rotateX(55deg);
+    z-index: 2;
+}
+
+.price-tag-btm{
+    position: absolute;
+    bottom: 10%;
+    left: 42%;
+    padding: 10px 15px; 
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    font-family: "Audiowide", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: rgba(0, 0, 0, 0.692);
+    border-radius: 5px;
+    z-index: 2;
+}
+
+.order-btn{
+    position: absolute;
+    left: 42%;
+    bottom: 20px;
+    padding: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: "Audiowide", serif;
+    font-weight: 400;
+    font-style: normal;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.text-ind{
+    position: absolute;
+    font-family: "Trade Winds", serif;
+    font-weight: 400;
+    font-style: normal;
+    left: 0%;
+    top: 5%;
+    font-size: 200px;
+    color: white;
+    color: orangered;
+}
+
+.text-des{
+    position: absolute;
+    font-family: "Trade Winds", serif;
+    font-weight: 400;
+    font-style: normal;
+    left: 0%;
+    top: 25%;
+    font-size: 250px;
+    color: white;
+    z-index: 1;
+}
+
+@media (max-width: 2600px) and (min-width: 1921px) {
+    
+    .header{  
+        height: 140px;
+        width: 100%;
+    }
+    
+    .header div{
+        font-size: 50px;
+    }
+    
+    .logo-name{
+        font-size: 100px;
+    }
+    
+    .side-text{
+        font-size: 50px;     
+    }
+    
+    .hand-img{
+        height: 2000px;
+        width: 2300px;
+    }
+    
+    .watch-img{
+        height: 800px;
+    }
+    
+    .text {
+        font-size: 320px;
+    }
+    
+    .text.move-left {
+        left: 14%;
+        top: 32%;
+        font-size: 5rem;
+    }
+    
+    .bottom-text{
+        font-size: 150px;
+    }   
+    
+    .left-text{
+        width: 700px;
+        font-size: 30px;
+    }
+    
+    .user-info{  
+        padding: 20px;  
+        font-size: 50px;
+    }
+    
+    .video-div{
+        height: 420px;
+        width: 700px;
+    }
+    
+    .price-tag{
+        font-size: 55px;   
+    }
+    
+    .concept{
+        font-size: 110px;
+    }
+    
+    .right-data{
+        width: 700px;
+    }
+    
+    .right-data p{
+        font-size: 30px;
+    }
+     
+    .side-img{
+        left: 0;
+        bottom: -310px;
+        height: 1300px;
+        width: 180vh;
+    }
+    
+    .price-tag-btm{
+        padding: 20px 25px; 
+        font-size: 55px;
+    }
+    
+    .order-btn{
+        padding: 20px;
+        font-size: 37px;
+    }
+    
+    .text-ind{
+        position: absolute;
+        font-family: "Trade Winds", serif;
+        font-weight: 400;
+        font-style: normal;
+        left: 0%;
+        top: 5%;
+        font-size: 380px;
+        color: white;
+        color: orangered;
+    } 
+
+    .text-des{
+        position: absolute;
+        font-family: "Trade Winds", serif;
+    font-weight: 400;
+    font-style: normal;
+        left: 0;
+        top: 25%;
+        font-size: 480px;
+        color: white;
+        z-index: 1;
+    }
+    
+}
+
+@media (max-width: 1920px) and (min-width: 1601px) {
+    
+    .header{  
+        height: 120px;
+        width: 100%;
+    }
+    
+    .header div{
+        font-size: 45px;
+    }
+    
+    .logo-name{
+        font-size: 80px;
+    }
+    
+    .side-text{
+        font-size: 40px;     
+    }
+    
+    .hand-img{
+        height: 1500px;
+        width: 1800px;
+    }
+    
+    .watch-img{
+        height: 600px;
+    }
+    
+    .text {
+        font-size: 250px;
+    }
+    
+    .text.move-left {
+        left: 13%;
+        top: 30%;
+        font-size: 3.5rem;
+    }
+    
+    .bottom-text{
+        font-size: 100px;
+    }   
+    
+    .left-text{
+        width: 500px;
+        font-size: 20px;
+    }
+    
+    .user-info{  
+        padding: 15px;  
+        font-size: 40px;
+    }
+    
+    .video-div{
+        height: 320px;
+        width: 550px;
+    }
+    
+    .price-tag{
+        font-size: 40px;   
+    }
+    
+    .concept{
+        font-size: 80px;
+    }
+    
+    .right-data{
+        width: 500px;
+    }
+    
+    .right-data p{
+        font-size: 23px;
+    }
+     
+    .side-img{
+        left: 0;
+        bottom: -190px;
+        height: 950px;
+        width: 180vh;
+    }
+    
+    .price-tag-btm{
+        padding: 15px 20px; 
+        font-size: 45px;
+    }
+    
+    .order-btn{
+        padding: 15px;
+        font-size: 27px;
+    }
+    
+    .text-ind{
+        position: absolute;
+        font-family: "Trade Winds", serif;
+        font-weight: 400;
+        font-style: normal;
+        left: 0%;
+        top: 5%;
+        font-size: 280px;
+        color: white;
+        color: orangered;
+    } 
+
+    .text-des{
+        position: absolute;
+        font-family: "Trade Winds", serif;
+    font-weight: 400;
+    font-style: normal;
+        left: 0;
+        top: 25%;
+        font-size: 350px;
+        color: white;
+        z-index: 1;
+    }
+    
+}
+
+@media (max-width: 1600px) and (min-width: 1531px) {
+    
+    .header{  
+        height: 80px;
+        width: 100%;
+    }
+    
+    .header div{
+        font-size: 35px;
+    }
+    
+    .logo-name{
+        font-size: 50px;
+    }
+    
+    .side-text{
+        font-size: 35px;     
+    }
+    
+    .hand-img{
+        height: 1300px;
+        width: 1600px;
+    }
+    
+    .watch-img{
+        height: 500px;
+    }
+    
+    .text {
+        font-size: 200px;
+    }
+    
+    .text.move-left {
+        left: 13%;
+        top: 30%;
+        font-size: 3rem;
+    }
+    
+    .bottom-text{
+        font-size: 80px;
+    }   
+    
+    .left-text{
+        width: 420px;
+        font-size: 20px;
+    }
+    
+    .user-info{  
+        padding: 10px;  
+        font-size: 30px;
+    }
+    
+    .video-div{
+        height: 280px;
+        width: 450px;
+    }
+    
+    .price-tag{
+        font-size: 30px;   
+    }
+    
+    .concept{
+        font-size: 65px;
+    }
+    
+    .right-data{
+        width: 450px;
+    }
+    
+    .right-data p{
+        font-size: 20px;
+    }
+     
+    .side-img{
+        left: 0;
+        bottom: -190px;
+        height: 850px;
+        width: 180vh;
+    }
+    
+    .price-tag-btm{
+        padding: 10px 15px; 
+        font-size: 40px;
+    }
+    
+    .order-btn{
+        padding: 10px;
+        font-size: 26px;
+    }
+    
+    .text-ind{
+        position: absolute;
+        font-family: "Trade Winds", serif;
+        font-weight: 400;
+        font-style: normal;
+        left: 0%;
+        top: 5%;
+        font-size: 240px;
+        color: white;
+        color: orangered;
+    } 
+
+    .text-des{
+        position: absolute;
+        font-family: "Trade Winds", serif;
+    font-weight: 400;
+    font-style: normal;
+        left: 0;
+        top: 25%;
+        font-size: 300px;
+        color: white;
+        z-index: 1;
+    }
+    
+}
+
+@media (max-width: 1000px) and (min-width:800px) {
+
+.hand-img{
+    position: absolute;     
+    left: 10;
+    top: -13%;
+    height: 1200px;
+    width: 1300px;
+    z-index: 2;
+}
+
+.watch-img{
+    position: absolute;
+    z-index: 4;
+    height: 400px;
+    transform: rotate(20deg);
+    bottom: 0;
+    top: 22%;
+    transition: transform 2s ease, opacity 1s ease, visibility 1s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.watch-img.rotate-90 {
+    transform: rotate(90deg); /* Rotate the image by 90 degrees */
+}
+
+.watch-img.show-image {
+    opacity: 1; /* Make the image fully visible */
+    visibility: visible; /* Show the image */
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 2s ease;
+    z-index: 1;
+    font-size: 140px;
+    color: white;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.text.move-left {
+    left: 14%;
+    top: 58%;
+    font-size: 1.7rem;
+}
+
+.text.show-text{
+    opacity: 1;
+    visibility: visible;
+}
+
+.bottom-text{
+    position: absolute;
+    bottom: 40px;
+    font-size: 100px;
+    z-index: 8;
+    color: rgb(38, 133, 136);
+    text-shadow: 1px 1px 10px black;
+}
+
+.left-text{
+    position: absolute;
+    color: white;
+    left: 3%;
+    top: 60%;
+    width: 320px;
+    z-index: 8;
+}
+
+.user-info{
+    position: absolute;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.199);
+    left: 3%;
+    top: 52%;
+    color: white;
+    font-size: 20px;
+    z-index: 8;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.video-div{
+    position: absolute;
+    left: 3%;
+    bottom: 140px;
+    height: 180px;
+    width: 300px;
+    z-index: 8;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: black;
+}
+
+.video-div video{
+    height: 100%;
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.price-tag{
+    position: absolute;
+    right: 3%;
+    padding: 10px 15px; 
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.233);
+    border-radius: 5px;
+    top:65%;
+}
+
+.concept{
+    position: absolute;
+    font-size: 60px;
+    right: 3%;
+    color: white;
+    top: 60%;
+}
+
+.right-data{
+    position: absolute;
+    right: 3%;
+    width: 380px;
+    bottom: 10%;
+    z-index: 8;
+}
+
+.right-data p{
+    color: white;
+    font-size: 17px;
+    text-align: center;
+    text-shadow: 1px 1px 3px black;
+}
+
+.side-img{
+    position: absolute;
+    left: 0;
+    bottom: -120px;
+    height:500px;
+    width: 100%;
+    transform: rotateX(55deg);
+    z-index: 2;
+}
+
+.price-tag-btm{
+    position: absolute;
+    bottom: 42%;
+    left: 40%;
+    padding: 10px 15px; 
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    font-family: "Audiowide", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: rgba(0, 0, 0, 0.692);
+    border-radius: 5px;
+    z-index: 2;
+}
+
+.order-btn{
+    position: absolute;
+    left: 40%;
+    bottom: 2%;
+    padding: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: "Audiowide", serif;
+    font-weight: 400;
+    font-style: normal;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.text-ind{
+    position: absolute;
+    font-family: "Trade Winds", serif;
+    font-weight: 400;
+    font-style: normal;
+    left: 0%;
+    top: 5%;
+    font-size: 130px;
+    color: white;
+    color: orangered;
+}
+
+.text-des{
+    position: absolute;
+    font-family: "Trade Winds", serif;
+    font-weight: 400;
+    font-style: normal;
+    left: 0%;
+    top: 25%;
+    font-size: 150px;
+    color: white;
+    z-index: 1;
+}
+
+.head2{
+    height: 50vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+}
+
+@media (max-width: 799px) and (min-width:700px) {
+
+    .head{
+        display: flex;
+        flex-wrap: wrap ;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 150vh;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .header{
+        position: fixed;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+        width: 100%;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.192);
+        z-index: 7;
+        box-shadow: 1px 1px 10px 2px black;
+        border: none;
+        backdrop-filter: blur(5px);
+        color: white;
+    }
+    
+    .header div{
+        display: flex;
+        gap: 10px;
+        font-size: 20px;
+    }
+    
+    .header div i{
+        cursor: pointer;
+    }
+    
+    .logo-name{
+        font-size: 40px;
+    }
+    
+    .side-text{
+        font-size: 20px;
+        cursor: pointer;
+    }
+    
+    .background-img{
+        height: 100%;
+        width: 100%;
+    }
+    
+    .img-top{
+        position: absolute;
+        height: 1000px;
+        width: 100%;
+        top: 3%;
+        background-size: cover;
+        z-index: 3;
+    }
+    
+    .img-bottom{
+        position: absolute;
+        height: 1000px;
+        width: 100%;
+        bottom: 0px;
+        top: 0%;
+        left: 0;
+        background-size: cover;
+        z-index: 1;
+    }
+    
+    .hand-img{
+        position: absolute; 
+        top: 0%;    
+        left: 10;
+        height: 1000px;
+        width: 1200px;
+        z-index: 2;
+    }
+    
+    .watch-img{
+        position: absolute;
+        z-index: 4;
+        height: 400px;
+        transform: rotate(20deg);
+        bottom: 0;
+        top: 20%;
+        transition: transform 2s ease, opacity 1s ease, visibility 1s ease;
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    .watch-img.rotate-90 {
+        transform: rotate(90deg); /* Rotate the image by 90 degrees */
+    }
+    
+    .watch-img.show-image {
+        opacity: 1; /* Make the image fully visible */
+        visibility: visible; /* Show the image */
+    }
+    
+    .text {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 2s ease;
+        z-index: 1;
+        font-size: 130px;
+        color: white;
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    .text.move-left {
+        left: 17%;
+        top: 50%;
+        font-size: 2rem;
+        z-index: 3;
+    }
+    
+    .text.show-text{
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .bottom-text{
+        position: absolute;
+        bottom: 0px;
+        top: 60%;
+        font-size: 100px;
+        z-index: 8;
+        color: rgb(38, 133, 136);
+        text-shadow: 1px 1px 10px black;
+    }
+    
+    .left-text{
+        position: absolute;
+        color: white;
+        left: 3%;
+        top: 52%;
+        width: 80%;
+        z-index: 8;
+        font-size: 20px;
+    }
+    
+    .user-info{
+        position: absolute;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.199);
+        left: 3%;
+        width: 130px;
+        top: 45%;
+        color: white;
+        font-size: 20px;
+        z-index: 8;
+        font-weight: bold;
+        border-radius: 10px;
+    }
+    
+    .video-div{
+        position: absolute;
+        left: 3%;
+        bottom: 30px;
+        height: 200px;
+        width: 350px;
+        z-index: 8;
+        border-radius: 10px;
+        padding: 5px;
+        background-color: black;
+    }
+    
+    .video-div video{
+        height: 100%;
+        width: 100%;
+        display: block;
+        border-radius: 10px;
+    }
+    
+    .price-tag{
+        position: absolute;
+        right: 40%;
+        padding: 10px 15px; 
+        font-size: 25px;
+        font-weight: bold;
+        color: white;
+        background-color: rgba(255, 255, 255, 0.233);
+        border-radius: 5px;
+        top: 77%;
+    }
+    
+    .concept{
+        position: absolute;
+        font-size: 110px;
+        right: 10%;
+        color: white;
+        top: 70%;
+    }
+    
+    .right-data{
+        position: absolute;
+        right: 3%;
+        width: 350px;
+        bottom: 2%;
+        z-index: 8;
+    }
+    
+    .right-data p{
+        color: white;
+        font-size: 17px;
+        text-align: center;
+        text-shadow: 1px 1px 3px black;
+    }
+    
+    .side-img{
+        position: absolute;
+        left: 0;
+        bottom: -120px;
+        height:500px;
+        width: 100%;
+        transform: rotateX(55deg);
+        z-index: 2;
+    }
+    
+    .price-tag-btm{
+        position: absolute;
+        bottom: 45%;
+        left: 40%;
+        padding: 10px 15px; 
+        font-size: 25px;
+        font-weight: bold;
+        color: white;
+        font-family: "Audiowide", serif;
+  font-weight: 400;
+  font-style: normal;
+        background-color: rgba(0, 0, 0, 0.692);
+        border-radius: 5px;
+        z-index: 2;
+    }
+    
+    .order-btn{
+        position: absolute;
+        left: 40%;
+        bottom: 2%;
+        padding: 10px;
+        font-size: 17px;
+        font-weight: bold;
+        font-family: "Audiowide", serif;
+  font-weight: 400;
+  font-style: normal;
+        cursor: pointer;
+        z-index: 3;
+    }
+    
+    .text-ind{
+        position: absolute;
+        font-family: "Trade Winds", serif;
+        font-weight: 400;
+        font-style: normal;
+        left: 0%;
+        top: 0%;
+        font-size: 125px;
+        color: white;
+        color: orangered;
+    }
+    
+    .text-des{
+        position: absolute;
+        font-family: "Trade Winds", serif;
+    font-weight: 400;
+    font-style: normal;
+        left: 0%;
+        top: 20%;
+        font-size: 145px;
+        color: white;
+        z-index: 1;
+    }
+    
+    .head2{
+        height: 50vh;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 699px) and (min-width:550px) {
+
+    .head{
+        display: flex;
+        flex-wrap: wrap ;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 150vh;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .header{
+        position: fixed;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+        width: 100%;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.192);
+        z-index: 7;
+        box-shadow: 1px 1px 10px 2px black;
+        border: none;
+        backdrop-filter: blur(5px);
+        color: white;
+    }
+    
+    .header div{
+        display: flex;
+        gap: 10px;
+        font-size: 20px;
+    }
+    
+    .header div i{
+        cursor: pointer;
+    }
+    
+    .logo-name{
+        font-size: 40px;
+    }
+    
+    .side-text{
+        font-size: 20px;
+        cursor: pointer;
+    }
+    
+    .background-img{
+        height: 100%;
+        width: 100%;
+    }
+    
+    .img-top{
+        position: absolute;
+        height: 930px;
+        width: 100%;
+        top: 3%;
+        background-size: cover;
+        z-index: 3;
+    }
+    
+    .img-bottom{
+        position: absolute;
+        height: 930px;
+        width: 100%;
+        bottom: 0px;
+        top: 0%;
+        left: 0;
+        background-size: cover;
+        z-index: 1;
+    }
+    
+    .hand-img{
+        position: absolute; 
+        top: 0%;    
+        left: 10;
+        height: 900px;
+        width: 1100px;
+        z-index: 2;
+    }
+    
+    .watch-img{
+        position: absolute;
+        z-index: 4;
+        height: 350px;
+        transform: rotate(20deg);
+        bottom: 0;
+        top: 20%;
+        transition: transform 2s ease, opacity 1s ease, visibility 1s ease;
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    .watch-img.rotate-90 {
+        transform: rotate(90deg); /* Rotate the image by 90 degrees */
+    }
+    
+    .watch-img.show-image {
+        opacity: 1; /* Make the image fully visible */
+        visibility: visible; /* Show the image */
+    }
+    
+    .text {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 2s ease;
+        z-index: 1;
+        font-size: 100px;
+        color: white;
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    .text.move-left {
+        left: 20%;
+        top: 50%;
+        font-size: 2rem;
+        z-index: 3;
+    }
+    
+    .text.show-text{
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .bottom-text{
+        position: absolute;
+        bottom: 0px;
+        top: 60%;
+        font-size: 90px;
+        z-index: 8;
+        color: rgb(38, 133, 136);
+        text-shadow: 1px 1px 10px black;
+    }
+    
+    .left-text{
+        position: absolute;
+        color: white;
+        left: 3%;
+        top: 52%;
+        width: 90%;
+        z-index: 8;
+        font-size: 20px;
+    }
+    
+    .user-info{
+        position: absolute;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.199);
+        left: 3%;
+        width: 130px;
+        top: 45%;
+        color: white;
+        font-size: 20px;
+        z-index: 8;
+        font-weight: bold;
+        border-radius: 10px;
+    }
+    
+    .video-div{
+        position: absolute;
+        left: 15%;
+        bottom: 10px;
+        height: 230px;
+        width: 400px;
+        z-index: 8;
+        border-radius: 10px;
+        padding: 5px;
+        background-color: black;
+    }
+    
+    .video-div video{
+        height: 100%;
+        width: 100%;
+        display: block;
+        border-radius: 10px;
+    }
+    
+    .price-tag{
+        position: absolute;
+        right: 10px;
+        padding: 7px 10px; 
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        background-color: rgba(255, 255, 255, 0.233);
+        border-radius: 5px;
+        top: 68.5%;
+    }
+    
+    .concept{
+        position: absolute;
+        font-size: 70px;
+        right: 0%;
+        left: 10px;
+        color: white;
+        top: 68%;
+    }
+    
+    .right-data{
+        position: absolute;
+        right: 0%;
+        left: 10px;
+        width: 95%;
+        bottom: 18%;
+        z-index: 8;
+    }
+    
+    .right-data p{
+        color: white;
+        font-size: 17px;
+        text-align: center;
+        text-shadow: 1px 1px 3px black;
+    }
+    
+    .side-img{
+        position: absolute;
+        left: 0;
+        bottom: -120px;
+        height:450px;
+        width: 100%;
+        transform: rotateX(55deg);
+        z-index: 2;
+    }
+    
+    .price-tag-btm{
+        position: absolute;
+        bottom: 45%;
+        left: 35%;
+        padding: 10px 15px; 
+        font-size: 25px;
+        font-weight: bold;
+        color: white;
+        font-family: "Audiowide", serif;
+  font-weight: 400;
+  font-style: normal;
+        background-color: rgba(0, 0, 0, 0.692);
+        border-radius: 5px;
+        z-index: 2;
+    }
+    
+    .order-btn{
+        position: absolute;
+        left: 35%;
+        bottom: 2%;
+        padding: 10px;
+        font-size: 17px;
+        font-weight: bold;
+        font-family: "Audiowide", serif;
+  font-weight: 400;
+  font-style: normal;
+        cursor: pointer;
+        z-index: 3;
+    }
+    
+    .text-ind{
+        position: absolute;
+        font-family: "Trade Winds", serif;
+        font-weight: 400;
+        font-style: normal;
+        left: 0%;
+        top: 0%;
+        font-size: 100px;
+        color: white;
+        color: orangered;
+    }
+    
+    .text-des{
+        position: absolute;
+        font-family: "Trade Winds", serif;
+    font-weight: 400;
+    font-style: normal;
+        left: 0%;
+        top: 20%;
+        font-size: 113px;
+        color: white;
+        z-index: 1;
+    }
+    
+    .head2{
+        height: 50vh;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 549px) and (min-width:361px) {
+
+    .head{
+        display: flex;
+        flex-wrap: wrap ;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 180vh;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .header{
+        position: fixed;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 40px;
+        width: 100%;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.192);
+        z-index: 7;
+        box-shadow: 1px 1px 10px 2px black;
+        border: none;
+        backdrop-filter: blur(5px);
+        color: white;
+    }
+    
+    .header div{
+        display: flex;
+        gap: 10px;
+        font-size: 15px;
+    }
+    
+    .header div i{
+        cursor: pointer;
+    }
+    
+    .logo-name{
+        font-size: 20px;
+    }
+    
+    .side-text{
+        font-size: 15px;
+        cursor: pointer;
+    }
+    
+    .background-img{
+        height: 100%;
+        width: 100%;
+    }
+    
+    .img-top{
+        position: absolute;
+        height: 530px;
+        width: 100%;
+        top: 23%;
+        background-size: cover;
+        z-index: 3;
+    }
+    
+    .img-bottom{
+        position: absolute;
+        height: 530px;
+        width: 100%;
+        bottom: 0px;
+        top: 20%;
+        left: 0;
+        background-size: cover;
+        z-index: 1;
+    }
+    
+    .hand-img{
+        position: absolute; 
+        top: 5%;    
+        left: 10;
+        height: 700px;
+        width: 750px;
+        z-index: 2;
+    }
+    
+    .watch-img{
+        position: absolute;
+        z-index: 4;
+        height: 220px;
+        transform: rotate(20deg);
+        bottom: 0;
+        top: 20%;
+        transition: transform 2s ease, opacity 1s ease, visibility 1s ease;
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    .watch-img.rotate-90 {
+        transform: rotate(90deg); /* Rotate the image by 90 degrees */
+    }
+    
+    .watch-img.show-image {
+        opacity: 1; /* Make the image fully visible */
+        visibility: visible; /* Show the image */
+    }
+    
+    .text {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 2s ease;
+        z-index: 1;
+        font-size: 85px;
+        color: white;
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    .text.move-left {
+        left: 22%;
+        top: 47%;
+        font-size: 1.5rem;
+        z-index: 3;
+        text-shadow: 1px 1px 3px white;
+    }
+    
+    .text.show-text{
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .bottom-text{
+        position: absolute;
+        bottom: 0px;
+        top: 5%;
+        font-size: 50px;
+        z-index: 8;
+        color: rgb(38, 133, 136);
+        text-shadow: 1px 1px 10px black;
+    }
+    
+    .left-text{
+        position: absolute;
+        color: white;
+        left: 3%;
+        top: 48%;
+        width: 95%;
+        z-index: 8;
+        font-size: 15px;
+    }
+    
+    .user-info{
+        position: absolute;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.199);
+        left: 33%;
+        width: 130px;
+        top: 9%;
+        color: white;
+        font-size: 20px;
+        z-index: 8;
+        font-weight: bold;
+        border-radius: 10px;
+    }
+    
+    .video-div{
+        position: absolute;
+        left: 4%;
+        bottom: 1%;
+        height: 230px;
+        width: 350px;
+        z-index: 8;
+        border-radius: 10px;
+        padding: 5px;
+        background-color: black;
+    }
+    
+    .video-div video{
+        height: 100%;
+        width: 100%;
+        display: block;
+        border-radius: 10px;
+    }
+    
+    .price-tag{
+        position: absolute;
+        right: 30%;
+        padding: 7px 10px; 
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        background-color: rgba(255, 255, 255, 0.233);
+        border-radius: 5px;
+        top: 63%;
+    }
+    
+    .concept{
+        position: absolute;
+        font-size: 65px;
+        right: 0%;
+        left: 10%;
+        color: white;
+        top: 59%;
+    }
+    
+    .right-data{
+        position: absolute;
+        right: 0%;
+        left: 10px;
+        width: 95%;
+        bottom: 19%;
+        z-index: 8;
+    }
+    
+    .right-data p{
+        color: white;
+        font-size: 17px;
+        text-align: center;
+        text-shadow: 1px 1px 3px black;
+    }
+    
+    .side-img{
+        position: absolute;
+        left: 0;
+        bottom: -90px;
+        height:350px;
+        width: 100%;
+        transform: rotateX(55deg);
+        z-index: 2;
+    }
+    
+    .price-tag-btm{
+        position: absolute;
+        bottom: 42%;
+        left: 30%;
+        padding: 7px 13px; 
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        font-family: "Audiowide", serif;
+  font-weight: 400;
+  font-style: normal;
+        background-color: rgba(0, 0, 0, 0.692);
+        border-radius: 5px;
+        z-index: 2;
+    }
+    
+    .order-btn{
+        position: absolute;
+        left: 30%;
+        bottom: 2%;
+        padding: 7px;
+        font-size: 15px;
+        font-weight: bold;
+        font-family: "Audiowide", serif;
+  font-weight: 400;
+  font-style: normal;
+        cursor: pointer;
+        z-index: 3;
+    }
+    
+    .text-ind{
+        position: absolute;
+        font-family: "Trade Winds", serif;
+        font-weight: 400;
+        font-style: normal;
+        left: 0%;
+        top: 3%;
+        font-size: 69px;
+        color: white;
+        color: orangered;
+    }
+    
+    .text-des{
+        position: absolute;
+        font-family: "Trade Winds", serif;
+    font-weight: 400;
+    font-style: normal;
+        left: 0%;
+        top: 20%;
+        font-size: 78px;
+        color: white;
+        z-index: 1;
+    }
+    
+    .head2{
+        height: 45vh;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 360px) and (min-width:300px) {
+
+    .head{
+        display: flex;
+        flex-wrap: wrap ;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 200vh;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .header{
+        position: fixed;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 40px;
+        width: 100%;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.192);
+        z-index: 7;
+        box-shadow: 1px 1px 10px 2px black;
+        border: none;
+        backdrop-filter: blur(5px);
+        color: white;
+    }
+    
+    .header div{
+        display: flex;
+        gap: 10px;
+        font-size: 15px;
+    }
+    
+    .header div i{
+        cursor: pointer;
+    }
+    
+    .logo-name{
+        font-size: 20px;
+    }
+    
+    .side-text{
+        font-size: 15px;
+        cursor: pointer;
+    }
+    
+    .background-img{
+        height: 100%;
+        width: 100%;
+    }
+    
+    .img-top{
+        position: absolute;
+        height: 530px;
+        width: 100%;
+        top: 16%;
+        background-size: cover;
+        z-index: 3;
+    }
+    
+    .img-bottom{
+        position: absolute;
+        height: 530px;
+        width: 100%;
+        bottom: 0px;
+        top: 13%;
+        left: 0;
+        background-size: cover;
+        z-index: 1;
+    }
+    
+    .hand-img{
+        position: absolute; 
+        top: 5%;    
+        left: 10;
+        height: 700px;
+        width: 700px;
+        z-index: 2;
+    }
+    
+    .watch-img{
+        position: absolute;
+        z-index: 4;
+        height: 220px;
+        transform: rotate(20deg);
+        bottom: 0;
+        top: 20%;
+        transition: transform 2s ease, opacity 1s ease, visibility 1s ease;
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    .watch-img.rotate-90 {
+        transform: rotate(90deg); /* Rotate the image by 90 degrees */
+    }
+    
+    .watch-img.show-image {
+        opacity: 1; /* Make the image fully visible */
+        visibility: visible; /* Show the image */
+    }
+    
+    .text {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 2s ease;
+        z-index: 1;
+        font-size: 75px;
+        color: white;
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    .text.move-left {
+        left: 27%;
+        top: 40%;
+        font-size: 1.5rem;
+        z-index: 3;
+        text-shadow: 1px 1px 3px white;
+    }
+    
+    .text.show-text{
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .bottom-text{
+        position: absolute;
+        bottom: 0px;
+        top: 5%;
+        font-size: 50px;
+        z-index: 8;
+        color: rgb(38, 133, 136);
+        text-shadow: 1px 1px 10px black;
+    }
+    
+    .left-text{
+        position: absolute;
+        color: white;
+        left: 3%;
+        top: 41%;
+        width: 95%;
+        z-index: 8;
+        font-size: 15px;
+    }
+    
+    .user-info{
+        position: absolute;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.199);
+        left: 33%;
+        width: 130px;
+        top: 8%;
+        color: white;
+        font-size: 20px;
+        z-index: 8;
+        font-weight: bold;
+        border-radius: 10px;
+    }
+    
+    .video-div{
+        position: absolute;
+        left: 1%;
+        bottom: 3%;
+        height: 230px;
+        width: 350px;
+        z-index: 8;
+        border-radius: 10px;
+        padding: 5px;
+        background-color: black;
+    }
+    
+    .video-div video{
+        height: 100%;
+        width: 100%;
+        display: block;
+        border-radius: 10px;
+    }
+    
+    .price-tag{
+        position: absolute;
+        right: 30%;
+        padding: 7px 10px; 
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        background-color: rgba(255, 255, 255, 0.233);
+        border-radius: 5px;
+        top: 58%;
+    }
+    
+    .concept{
+        position: absolute;
+        font-size: 60px;
+        right: 0%;
+        left: 10px;
+        color: white;
+        top: 53%;
+    }
+    
+    .right-data{
+        position: absolute;
+        right: 0%;
+        left: 10px;
+        width: 95%;
+        bottom: 21%;
+        z-index: 8;
+    }
+    
+    .right-data p{
+        color: white;
+        font-size: 17px;
+        text-align: center;
+        text-shadow: 1px 1px 3px black;
+    }
+    
+    .side-img{
+        position: absolute;
+        left: 0;
+        bottom: -90px;
+        height:350px;
+        width: 100%;
+        transform: rotateX(55deg);
+        z-index: 2;
+    }
+    
+    .price-tag-btm{
+        position: absolute;
+        bottom: 50%;
+        left: 25%;
+        padding: 7px 13px; 
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        font-family: "Audiowide", serif;
+        font-weight: 400;
+        font-style: normal;
+        background-color: rgba(0, 0, 0, 0.692);
+        border-radius: 5px;
+        z-index: 2;
+    }
+    
+    .order-btn{
+        position: absolute;
+        left: 25%;
+        bottom: 2%;
+        padding: 7px;
+        font-size: 15px;
+        font-weight: bold;
+        font-family: "Audiowide", serif;
+        font-weight: 400;
+        font-style: normal;
+        cursor: pointer;
+        z-index: 3;
+    }
+    
+    .text-ind{
+        position: absolute;
+        font-family: "Trade Winds", serif;
+        font-weight: 400;
+        font-style: normal;
+        left: 0%;
+        top: 3%;
+        font-size: 60px;
+        color: white;
+        color: orangered;
+    }
+    
+    .text-des{
+        position: absolute;
+        font-family: "Trade Winds", serif;
+        font-weight: 400;
+        font-style: normal;
+        left: 0%;
+        top: 20%;
+        font-size: 68px;
+        color: white;
+        z-index: 1;
+    }
+    
+    .head2{
+        height: 45vh;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+}
